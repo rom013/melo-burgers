@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    @apply min-h-[200vh] bg-black-500 flex flex-col
+}
+
+/*.li-nav{
+    @apply 
+        flex 
+        text-white gap-6 
+        bg-[#0F0F0F] 
+        rounded-br 
+        font-sora 
+        flex-col 
+        py-16 
+        px-8 
+        md:rounded-none 
+        md:flex-row 
+        md:p-0 
+        md:bg-transparent
+}*/
+.anchor-nav{
+    @apply cursor-pointer
+}
+.anchor-nav:hover{
+    @apply text-red-500
+}
+
+.active{
+    @apply translate-x-[-150px]
+}
+
+
+
+.btn-menu{
+    @apply 
+    bg-orange-500 
+    text-lg 
+    w-max 
+    text-white 
+    font-bold 
+    font-sora 
+    text-center 
+    py-4
+    px-6
+    flex
+    items-center
+    gap-2
+}
+@layer components{
+    .btn{
+        color: #FF6C00;
+        padding: 16px 24px;
+        border: 1px solid #FF6C00;
+        border-radius: 8px;
+        position:relative;
+        box-sizing: border-box;
+        transition: 1s;
+        background: rgba(0,0,0,0);
+        font-size: 1.875rem
+    }
+    .btn::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background: #FF6C00;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+        transition: .4s;
+        z-index: -1
+    }
+
+    .btn:hover::after{
+        width: 100%;
+    }
+    .btn:hover{
+        color: #FFF;
+    
+    }
+}
+
+.close{color: #f00; text-shadow: 0 0 4px #f00}.open{color: #12C945; text-shadow: 0 0 4px #12C945}

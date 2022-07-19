@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melo Burgers</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- end-font -->
+
+    <!-- script -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <!-- end script -->
+</head>
+
+<body>
+    <nav 
+        class="z-20 fixed w-screen flex justify-between  top-0 transition duration-500 md:w-[calc(100%-154px)] md:translate-x-0 md:ml-6 md:mr-32 md:justify-end md:top-16 md:items-center"
+        id="nav"
+    >
+
+    <div class="flex active transition duration-500 md:translate-x-0 relative" id="listNav">
+        <ul 
+            class="flex text-white gap-6 bg-[#0F0F0F] rounded-br font-sora flex-col py-16 px-8 md:rounded-none md:flex md:flex-row md:p-0 md:bg-transparent"   
+        >
+            <li class="md:li-nav">
+                <a href="#">
+                    Home
+                </a>
+            </li>
+            <li class="md:li-nav">
+                <a href="#">
+                    Sobre nós
+                </a>
+            </li>
+            <li class="md:li-nav">
+                <a href="#">
+                    Cardápio
+                </a>
+            </li>
+            <li class="md:li-nav">
+                <a href="#">
+                    Galeria
+                </a>
+            </li>
+            <li class="md:li-nav">
+                <a href="#">
+                    Contato
+                </a>
+            </li>
+        </ul>
+
+        <div class="absolute right-[-3.5rem] top-6 space-y-2  md:hidden" id="btn-mobile" aria-expanded="false" aria-label="Abrir Menu">
+            <div class="w-8 h-0.5 bg-white rounded"></div>
+            <div class="w-8 h-0.5 bg-white rounded"></div>
+            <div class="w-8 h-0.5 bg-white rounded"></div>
+        </div>
+    </div>
+        
+
+        <div
+            class="mr-6 mt-6 w-12 h-12 md:hidden"
+        >
+            <img src="src/img/logo.png" alt="logo melo burgers" class="w-full h-full">
+        </div>
+    </nav>
+    <header class="h-screen relative bg-fixed bg-no-repeat bg-cover bg-none md:bg-bg-main md:grid md:grid-cols-3">
+
+        <div class="hidden relative text-center md:inline-block">
+            <span
+                class="animate-pulse  py-2 px-3 relative top-40 border border-orange-500 pointer-events-none rounded-lg text-green-500 font-bold text-xl font-sora open"
+            >
+                ABERTO
+            </span>
+        </div>
+
+        <div
+            class="h-full mx-6 flex flex-col justify-center items-center gap-y-16 md:mx-0 md:gap-28 "
+        >
+            <img 
+                src="src/img/img.png" 
+                class="w-full md:hidden"
+                alt=""
+            >
+
+
+            <div
+                class="flex flex-col gap-y-4"
+            >
+                <div
+                    class="flex justify-center gap-4 items-center"
+                >
+                    <i class="ph-map-pin-fill text-yellow-500 text-2xl"></i>
+                    <h3
+                        class="text-white text-center font-sora font-bold text-sm leading-relaxed"
+                    >
+                        R. Carlos Jair de Lima Guimarães, 85 <br>
+                        Bom Retiro Santos - SP
+                    </h3>
+                </div>
+            
+                <div
+                    class="flex justify-center gap-4 items-center text-color"
+                >
+                    <i class="ph-clock-bold text-yellow-500 text-2xl"></i>
+                    <h3
+                        class="text-white text-center font-sora font-bold text-sm"
+                    >
+                        19:00h às 01:00h
+                    </h3>
+                </div>
+            </div>
+
+            <a 
+                href="#"
+                class="btn-menu rounded-full md:btn md:z-10"
+            >
+                VER CARDÁPIO
+                <i class="ph-caret-right font-bold text-3xl"></i>
+            </a>
+        </div>
+
+        <div 
+            class="hidden justify-center items-center md:flex"
+        >
+            <img src="src/img/logo.png" alt="logo" class="w-9/12 max-w-[300px]">
+        </div>
+
+    </header>
+    <hr>
+    <main>
+        <section>
+
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
