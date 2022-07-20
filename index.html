@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -72,7 +72,7 @@
             <img src="src/img/logo.png" alt="logo melo burgers" class="w-full h-full">
         </div>
     </nav>
-    <header class="h-screen relative bg-fixed bg-no-repeat bg-cover bg-none md:bg-bg-main md:grid md:grid-cols-3">
+    <header class="min-h-screen relative bg-fixed bg-no-repeat bg-cover bg-none md:bg-bg-main md:grid md:grid-cols-3">
 
         <div class="hidden relative text-center md:inline-block">
             <span
@@ -83,17 +83,17 @@
         </div>
 
         <div
-            class="h-full mx-6 flex flex-col justify-center items-center gap-y-16 md:mx-0 md:gap-28 "
+            class="h-full mx-6 flex flex-col items-center gap-y-16 md:mx-0 md:gap-28 md:justify-center"
         >
             <img 
                 src="src/img/img.png" 
-                class="w-full md:hidden"
+                class="w-full mt-28 md:hidden"
                 alt=""
             >
 
 
             <div
-                class="flex flex-col gap-y-4"
+                class="flex flex-col gap-y-4 "
             >
                 <div
                     class="flex justify-center gap-4 items-center"
@@ -121,7 +121,7 @@
 
             <a 
                 href="#"
-                class="btn-menu rounded-full md:btn md:z-10"
+                class="btn-menu rounded-full mb-32 md:btn md:z-10 md:mb-0"
             >
                 VER CARDÁPIO
                 <i class="ph-caret-right font-bold text-3xl"></i>
@@ -135,10 +135,50 @@
         </div>
 
     </header>
-    <hr>
-    <main>
-        <section>
-
+    <hr class="md:hidden">
+    <main
+        class="mx-6 md:mx-0"
+    >
+        <section
+            class="flex h-[660px]"
+        >
+            <div
+                class="hidden md:flex flex-1 h-[512px] after:glass-orange relative"
+            >
+                <img src="src/img/img.png" alt="" class="w-full h-full ">
+            </div>
+            <div
+                class="test"
+            >
+                <span 
+                    class="hidden md:flex text-white font-bold font-sora absolute right-0 top-10 items-center gap-2 after:w-28 text-sm after:bg-white after:block after:h-[1px]"
+                >
+                    BEM-VINDO
+                </span>
+                <h2 
+                    class="text-white font-bold font-sora text-2xl text-center mt-24 mb-6 md:text-[2.5rem] md:text-start"
+                >
+                    Sobre <span class="text-orange-500">nós</span>
+                </h2>
+    
+                <p
+                    class="text-white leading-relaxed font-lato text-xs mb-10 md:text-[1rem]"
+                >
+                    Nós somos a mais nova lanchonete da zona noroeste!
+                    <br><br>
+                    Contamos com serviço de entrega em todos os bairros da Zona Noroeste, nossa lanchonete também está disponível no IFood.
+                    <br><br>
+                    Nosso objetivo é oferecer ao cliente qualidade, preço justo e respeito.
+                </p>
+    
+                <a 
+                    href="#"
+                    class="bg-orange-500 px-6 py-2 w-max flex items-center gap-x-4 text-white font-sora font-bold rounded-lg mx-auto md:ml-auto md:mr-0"
+                >
+                    Vanha nos visitar
+                    <i class="ph-caret-right font-bold text-lg"></i>
+                </a>
+            </div>
         </section>
     </main>
 

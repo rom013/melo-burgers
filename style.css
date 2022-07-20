@@ -4,7 +4,7 @@
 
 
 body{
-    @apply min-h-[200vh] bg-black-500 flex flex-col
+    @apply min-h-[200vh] bg-black-500 flex flex-col scroll-smooth
 }
 
 /*.li-nav{
@@ -83,6 +83,23 @@ body{
         color: #FFF;
     
     }
+
+    .glass-orange{
+        content: "";
+        width: 250px;
+        height: 300px;
+        display: block;
+        background: rgb(255 108 0 / 20%);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-top-left-radius: 8px;
+        backdrop-filter: blur(1px);
+    }
 }
 
 .close{color: #f00; text-shadow: 0 0 4px #f00}.open{color: #12C945; text-shadow: 0 0 4px #12C945}
+
+.test{
+    @apply md:flex-1 md:h-[512px] md:mt-auto md:bg-[#252525] md:pl-20 md:pr-32 md:gap-y-11 md:relative
+}
