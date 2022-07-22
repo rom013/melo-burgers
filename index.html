@@ -23,51 +23,50 @@
 
 <body>
     <nav 
-        class="z-20 fixed w-screen flex justify-between  top-0 transition duration-500 md:w-[calc(100%-154px)] md:translate-x-0 md:ml-6 md:mr-32 md:justify-end md:top-16 md:items-center"
+        class="z-20 absolute w-screen flex justify-between  top-0 transition duration-500 md:w-[calc(100%-154px)] md:translate-x-0 md:ml-6 md:mr-32 md:justify-end md:top-16 md:items-center"
         id="nav"
     >
+        <div class="fixed flex active transition duration-500 md:translate-x-0" id="listNav">
+            <ul 
+                class="flex text-white gap-6 bg-[#0F0F0F] rounded-br font-sora flex-col py-16 px-8 md:rounded-none md:flex md:flex-row md:p-0 md:bg-transparent"   
+            >
+                <li class="md:li-nav">
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="md:li-nav">
+                    <a href="#">
+                        Sobre nós
+                    </a>
+                </li>
+                <li class="md:li-nav">
+                    <a href="#">
+                        Cardápio
+                    </a>
+                </li>
+                <li class="md:li-nav">
+                    <a href="#">
+                        Galeria
+                    </a>
+                </li>
+                <li class="md:li-nav">
+                    <a href="#">
+                        Contato
+                    </a>
+                </li>
+            </ul>
 
-    <div class="flex active transition duration-500 md:translate-x-0 relative" id="listNav">
-        <ul 
-            class="flex text-white gap-6 bg-[#0F0F0F] rounded-br font-sora flex-col py-16 px-8 md:rounded-none md:flex md:flex-row md:p-0 md:bg-transparent"   
-        >
-            <li class="md:li-nav">
-                <a href="#">
-                    Home
-                </a>
-            </li>
-            <li class="md:li-nav">
-                <a href="#">
-                    Sobre nós
-                </a>
-            </li>
-            <li class="md:li-nav">
-                <a href="#">
-                    Cardápio
-                </a>
-            </li>
-            <li class="md:li-nav">
-                <a href="#">
-                    Galeria
-                </a>
-            </li>
-            <li class="md:li-nav">
-                <a href="#">
-                    Contato
-                </a>
-            </li>
-        </ul>
-
-        <div class="absolute right-[-3.5rem] top-6 space-y-2  md:hidden" id="btn-mobile" aria-expanded="false" aria-label="Abrir Menu">
-            <div class="w-8 h-0.5 bg-white rounded"></div>
-            <div class="w-8 h-0.5 bg-white rounded"></div>
-            <div class="w-8 h-0.5 bg-white rounded"></div>
+            <div class="absolute right-[-3.5rem] top-6 space-y-2  md:hidden" id="btn-mobile" aria-expanded="false" aria-label="Abrir Menu">
+                <div class="w-8 h-0.5 bg-white rounded"></div>
+                <div class="w-8 h-0.5 bg-white rounded"></div>
+                <div class="w-8 h-0.5 bg-white rounded"></div>
+            </div>
         </div>
-    </div>
         
 
         <div
-            class="mr-6 mt-6 w-12 h-12 md:hidden"
+            class="mr-6 mt-6 w-12 h-12 md:hidden fixed right-0"
         >
             <img src="src/img/logo.png" alt="logo melo burgers" class="w-full h-full">
         </div>
@@ -120,8 +119,8 @@
             </div>
 
             <a 
-                href="#"
-                class="btn-menu rounded-full mb-32 md:btn md:z-10 md:mb-0"
+                href="#menu-ancher"
+                class="btn-menu bg-orange-500 rounded-full mb-32 md:btn md:z-10 md:mb-0"
             >
                 VER CARDÁPIO
                 <i class="ph-caret-right font-bold text-3xl"></i>
@@ -137,10 +136,11 @@
     </header>
     <hr class="md:hidden">
     <main
-        class="mx-6 md:mx-0"
+        class="flex flex-col gap-y-16"
     >
+        <!-- about us -->
         <section
-            class="flex h-[660px]"
+            class="flex md:h-[660px] mx-6 md:mx-0"
         >
             <div
                 class="hidden md:flex flex-1 h-[512px] after:glass-orange relative"
@@ -180,12 +180,162 @@
                 </a>
             </div>
         </section>
+        <!-- end about us -->
+
+        <!-- menu -->
+        <section
+            class="flex justify-end bg-bg-menu md:bg-bg-menu md:bg-cover bg-no-repeat p-7 md:px-24 md:py-20 text-white"
+        >
+            <div
+                class="flex flex-col gap-8 items-center"
+            >
+                <h2 class="text-2xl font-bold font-sora underline" id="menu-ancher">
+                    CARDÁPIO
+                </h2>
+
+                <p class="text-sm font-lato leading-relaxed">
+                    Os hamburgues mais deliciosos estão presentes no nosso cardápio. 
+                    <br>
+                    Confira nosso cardápio e pessa já o seu! 
+                </p>
+
+                <a 
+                    href="https://wa.me/5513991302403?text=ol%C3%A1!%20gostaria%20de%20ver%20o%20card%C3%A1pio"
+                    class="btn-menu bg-yellow-600 rounded-full md:btn z-30 md:border-yellow-500 md:text-yellow-500 md:after:bg-yellow-500"
+                >
+                    VER CARDÁPIO
+                    <i class="ph-caret-right font-bold text-3xl"></i>
+                </a>
+            </div>
+        </section>
+        <!-- end menu -->
+
+        <!-- gallery -->
+        <section
+            class="text-white flex flex-col gap-y-9 items-center"
+        >
+            <div class="flex items-center flex-col">
+                <h2 class="text-2xl font-bold font-sora md:italic after-line before-line flex items-center gap-4 " id="menu-ancher">
+                    GALERIA
+                </h2>
+                <p class="text-xs font-lato hover:text-orange-500 cursor-default">@melo.burgers</p>
+            </div>
+            <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                <div
+                    class="grid grid-cols-3 grid-rows-2 gap-1"
+                >
+                    <div class="img-gallery">
+                        <img src="src/img/img.png" alt="">
+                    </div>
+                    <div class="img-gallery">
+                        <img src="src/img/img.png" alt="">
+                    </div>
+                    <div class="img-gallery">
+                        <img src="src/img/img.png" alt="">
+                    </div>
+                    <div class="img-gallery">
+                        <img src="https://github.com/rom013.png" alt="">
+                    </div>
+                    <div class="img-gallery">
+                        <img src="https://github.com/rom013.png" alt="">
+                    </div>
+                    <div class="img-gallery">
+                        <img src="https://github.com/rom013.png" alt="">
+                    </div>
+                </div>
+    
+                <a href="#" class="btn-menu bg-orange-500 rounded-lg">
+                    VER MAIS
+                    <i class="ph-caret-right font-bold text-3xl"></i>
+                </a>
+                
+            </div>
+        </section>
+        <!-- end gallery -->
+
+        <!-- contact -->
+        <section class="border-t border-dashed pt-12">
+            <div
+                class="text-white flex flex-col items-center gap-8"
+            >
+                <ul 
+                    class="flex flex-col gap-4"
+                >
+                    <li 
+                        class="list-contact"
+                    >
+                        <div class="w-6 h-6 bg-orange-100 rounded-full flex justify-center items-center">
+                            <i class="ph-whatsapp-logo"></i>
+                        </div>
+                        <p class="font-lato text-xs">
+                            (13) 9 9130-2430
+                        </p>
+                    </li>
+                    <li 
+                        class="list-contact"
+                    >
+                        <div class="w-6 h-6 bg-orange-100 rounded-full flex justify-center items-center">
+                            <i class="ph-map-pin"></i>
+                        </div>
+                        <p class="font-lato text-xs">
+                            Tv. Carlos Jair de Lima Guimarães, 85 <br>
+                            Bom Retiro - Santos - SP
+                        </p>
+                    </li>
+                    <li 
+                        class="list-contact"
+                    >
+                        <div class="w-6 h-6 bg-orange-100 rounded-full flex justify-center items-center">
+                            <i class="ph-at"></i>
+                        </div>
+                        <p class="font-lato text-xs">
+                            emailemail@gmail.com
+                        </p>
+                    </li>
+                    <li 
+                        class="list-contact"
+                    >
+                        <div class="w-6 h-6 bg-orange-100 rounded-full flex justify-center items-center">
+                            <i class="ph-instagram-logo"></i>
+                        </div>
+                        <p class="font-lato text-xs">
+                            @MlBurgers
+                        </p>
+                    </li>
+                </ul>
+
+                <div
+                    class="border rounded-lg bg-black-500 px-3 py-4 flex flex-col gap-y-6"
+                >
+                    <div class="flex items-center justify-between gap-x-6 font-sora">
+                        <p class="font-bold text-sm">
+                            Terça à Quinta 
+                        </p>
+                        <p class="text-[12px]">
+                            19:00h - 22:00h
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-between gap-x-6 font-sora"
+                    >
+                        <p class="font-bold text-sm">
+                            Sexta à Domingo 
+                        </p>
+                        <p class="text-[12px]">
+                            18:00h - 00:00h
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end contact -->
     </main>
 
 
 
 
-
+    <!-- corrigir o espaço do navz -->
 
 
     <script type="module" src="/main.js"></script>

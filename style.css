@@ -36,15 +36,15 @@ body{
 
 
 .btn-menu{
-    @apply 
-    bg-orange-500 
+    @apply  
     text-lg 
     w-max 
     text-white 
     font-bold 
     font-sora 
     text-center 
-    py-4
+    py-2
+    md:py-4
     px-6
     flex
     items-center
@@ -98,8 +98,22 @@ body{
     }
 }
 
+.img-gallery{
+    @apply w-28 h-28 bg-black md:w-72 md:h-72 cursor-pointer
+}
+
+.after-line{
+    @apply after:w-16 after:h-[2px] after:bg-white after:block
+}
+.before-line{
+    @apply before:w-16 before:h-[2px] before:bg-white before:block
+}
 .close{color: #f00; text-shadow: 0 0 4px #f00}.open{color: #12C945; text-shadow: 0 0 4px #12C945}
 
 .test{
     @apply md:flex-1 md:h-[512px] md:mt-auto md:bg-[#252525] md:pl-20 md:pr-32 md:gap-y-11 md:relative
+}
+
+.list-contact{
+    @apply flex items-center gap-x-4
 }
