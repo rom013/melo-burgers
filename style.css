@@ -4,7 +4,7 @@
 
 
 body{
-    @apply min-h-[200vh] bg-black-500 flex flex-col scroll-smooth
+    @apply min-h-[200vh] bg-black-500 flex flex-col scroll-smooth relative
 }
 
 /*.li-nav{
@@ -96,10 +96,12 @@ body{
         border-top-left-radius: 8px;
         backdrop-filter: blur(1px);
     }
+
+    
 }
 
 .img-gallery{
-    @apply w-28 h-28 bg-black md:w-72 md:h-72 cursor-pointer
+    @apply w-full h-full bg-black  cursor-pointer relative rounded-lg overflow-hidden
 }
 
 .after-line{
@@ -108,7 +110,7 @@ body{
 .before-line{
     @apply before:w-16 before:h-[2px] before:bg-white before:block
 }
-.close{color: #f00; text-shadow: 0 0 4px #f00}.open{color: #12C945; text-shadow: 0 0 4px #12C945}
+
 
 .test{
     @apply md:flex-1 md:h-[512px] md:mt-auto md:bg-[#252525] md:pl-20 md:pr-32 md:gap-y-11 md:relative
@@ -116,4 +118,54 @@ body{
 
 .list-contact{
     @apply flex items-center gap-x-4
+}
+
+.circle-icon{
+    @apply 
+    w-6 h-6 
+    bg-orange-100 
+    rounded-full 
+    flex 
+    justify-center 
+    items-center 
+    
+    md:h-10
+    md:w-10
+}
+
+.img-after:hover::after{
+    border: 4px solid #FF6C00;
+    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px, rgb(0 0 0 / 72%) 0px 30px 22px -10px
+}
+
+.img-after::after{
+    border-radius: 4px;
+    border: 4px solid rgba(255, 255, 255, 0);
+    inset: 0px;
+    content: "";
+    position: absolute;
+    transition: border 300ms ease-out 0s;
+    border-radius: 8px
+}
+
+.display-mobile{
+    display: block;
+    top: 0;
+    text-align: center;
+    border: none;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    /* background: #12c945; */
+    padding: 0;
+    font-size: 12px;
+    border-radius: 0;
+    color: #fff;
+    font-weight: 800;
+}
+@layer components{
+    .displayDesktop{
+        @apply inline border-2 border-solid md:!animate-pulse  md:py-2 md:px-3 md:relative md:top-40 md:border md:border-orange-500 md:pointer-events-none md:rounded-lg md:font-bold md:text-xl md:font-sora md:text-red-500 bg-transparent
+    }
+    .close{color: #f00 !important; text-shadow: 0 0 4px #f00 !important}.open{color: #12C945 !important; text-shadow: 0 0 4px #12C945 !important}
 }

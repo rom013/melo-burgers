@@ -18,15 +18,19 @@
 
     <!-- script -->
     <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- end script -->
 </head>
 
 <body>
+    <!-- <div class="w-full flex justify-center bg-red-500 fixed z-50 md:hidden" id="topOpenClose">
+        <span>FECHADO</span>
+    </div> -->
     <nav 
-        class="z-20 absolute w-screen flex justify-between  top-0 transition duration-500 md:w-[calc(100%-154px)] md:translate-x-0 md:ml-6 md:mr-32 md:justify-end md:top-16 md:items-center"
+        class="z-20 absolute w-screen flex justify-between  top-0 transition duration-500 md:w-[calc(100%-154px)] md:translate-x-0 md:ml-6 md:mr-32 md:justify-end md:top-16 md:items-center md:fixed"
         id="nav"
     >
-        <div class="fixed flex active transition duration-500 md:translate-x-0" id="listNav">
+        <div class="fixed flex active transition duration-500 md:translate-x-0 z-50" id="listNav">
             <ul 
                 class="flex text-white gap-6 bg-[#0F0F0F] rounded-br font-sora flex-col py-16 px-8 md:rounded-none md:flex md:flex-row md:p-0 md:bg-transparent"   
             >
@@ -36,22 +40,22 @@
                     </a>
                 </li>
                 <li class="md:li-nav">
-                    <a href="#">
+                    <a href="#aboutUs" aria-hidden="true">
                         Sobre nós
                     </a>
                 </li>
                 <li class="md:li-nav">
-                    <a href="#">
+                    <a href="#menu">
                         Cardápio
                     </a>
                 </li>
                 <li class="md:li-nav">
-                    <a href="#">
+                    <a href="#gallery">
                         Galeria
                     </a>
                 </li>
                 <li class="md:li-nav">
-                    <a href="#">
+                    <a href="#contact">
                         Contato
                     </a>
                 </li>
@@ -71,16 +75,10 @@
             <img src="src/img/logo.png" alt="logo melo burgers" class="w-full h-full">
         </div>
     </nav>
+
+    
+
     <header class="min-h-screen relative bg-fixed bg-no-repeat bg-cover bg-none md:bg-bg-main md:grid md:grid-cols-3">
-
-        <div class="hidden relative text-center md:inline-block">
-            <span
-                class="animate-pulse  py-2 px-3 relative top-40 border border-orange-500 pointer-events-none rounded-lg text-green-500 font-bold text-xl font-sora open"
-            >
-                ABERTO
-            </span>
-        </div>
-
         <div
             class="h-full mx-6 flex flex-col items-center gap-y-16 md:mx-0 md:gap-28 md:justify-center"
         >
@@ -92,12 +90,14 @@
 
 
             <div
-                class="flex flex-col gap-y-4 "
+                class="flex flex-col gap-y-4"
             >
                 <div
-                    class="flex justify-center gap-4 items-center"
+                    class="flex justify-center gap-4 items-center invisible an-contact"
                 >
                     <i class="ph-map-pin-fill text-yellow-500 text-2xl"></i>
+
+                    <!-- <svg width="24" height="24" viewBox="0 0 256 256"><rect width="24" height="24" fill="none"></rect><circle cx="128" cy="104" r="32" fill="none" class="stroke-yellow-500" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z" fill="none" class="stroke-yellow-500" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg> -->
                     <h3
                         class="text-white text-center font-sora font-bold text-sm leading-relaxed"
                     >
@@ -107,14 +107,15 @@
                 </div>
             
                 <div
-                    class="flex justify-center gap-4 items-center text-color"
+                    class="flex justify-center gap-4 items-center text-color invisible an-contact"
                 >
                     <i class="ph-clock-bold text-yellow-500 text-2xl"></i>
-                    <h3
+
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" class="stroke-yellow-500" stroke-miterlimit="10" stroke-width="16"></circle><polyline points="128 72 128 128 184 128" fill="none" class="stroke-yellow-500" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg> -->
+                    <span
                         class="text-white text-center font-sora font-bold text-sm"
-                    >
-                        19:00h às 01:00h
-                    </h3>
+                        id="openingHours"
+                    ></span>
                 </div>
             </div>
 
@@ -124,23 +125,36 @@
             >
                 VER CARDÁPIO
                 <i class="ph-caret-right font-bold text-3xl"></i>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="96 48 176 128 96 208" fill="none" class="stroke-orange-500" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg> -->
             </a>
         </div>
 
         <div 
-            class="hidden justify-center items-center md:flex"
+            class="hidden justify-center items-center md:flex invisible logo-header"
         >
             <img src="src/img/logo.png" alt="logo" class="w-9/12 max-w-[300px]">
         </div>
 
     </header>
     <hr class="md:hidden">
+
+    <a 
+        class="w-10 h-10 rounded-full bg-green-500 fixed top-[90%] left-4 z-50 text-white flex justify-center items-center text-2xl btn-float" style="display: none;" 
+        href="https://wa.me/5513991302403?text=ol%C3%A1!%20gostaria%20de%20ver%20o%20card%C3%A1pio"
+    >
+        <i class="ph-whatsapp-logo"></i>
+    </a>
+    <div class="w-10 h-10 rounded-full bg-yellow-500 fixed top-[90%] right-4 z-[52] text-white flex justify-center items-center text-2xl btn-float cursor-pointer" style="display: none;" id="toTop">
+        <i class="ph-caret-up"></i>
+    </div>
+
     <main
-        class="flex flex-col gap-y-16"
+        class="flex flex-col gap-y-16" id="main"
     >
         <!-- about us -->
         <section
-            class="flex md:h-[660px] mx-6 md:mx-0"
+            class="flex md:h-[660px] mx-6 md:mx-0 invisible section-reveal-lateral"
+            id="aboutUs"
         >
             <div
                 class="hidden md:flex flex-1 h-[512px] after:glass-orange relative"
@@ -175,7 +189,7 @@
                     href="#"
                     class="bg-orange-500 px-6 py-2 w-max flex items-center gap-x-4 text-white font-sora font-bold rounded-lg mx-auto md:ml-auto md:mr-0"
                 >
-                    Vanha nos visitar
+                    Venha nos visitar
                     <i class="ph-caret-right font-bold text-lg"></i>
                 </a>
             </div>
@@ -184,7 +198,8 @@
 
         <!-- menu -->
         <section
-            class="flex justify-end bg-bg-menu md:bg-bg-menu md:bg-cover bg-no-repeat p-7 md:px-24 md:py-20 text-white"
+            id="menu"
+            class="flex justify-end bg-bg-menu md:bg-bg-menu md:bg-cover bg-no-repeat p-7 md:px-24 md:py-20 text-white invisible section-reveal-top"
         >
             <div
                 class="flex flex-col gap-8 items-center"
@@ -194,14 +209,14 @@
                 </h2>
 
                 <p class="text-sm font-lato leading-relaxed">
-                    Os hamburgues mais deliciosos estão presentes no nosso cardápio. 
+                    Os hambúrgueres mais deliciosos estão presentes no nosso cardápio. 
                     <br>
                     Confira nosso cardápio e pessa já o seu! 
                 </p>
 
                 <a 
                     href="https://wa.me/5513991302403?text=ol%C3%A1!%20gostaria%20de%20ver%20o%20card%C3%A1pio"
-                    class="btn-menu bg-yellow-600 rounded-full md:btn z-30 md:border-yellow-500 md:text-yellow-500 md:after:bg-yellow-500"
+                    class="btn-menu bg-yellow-600 rounded-full md:btn md:z-30 md:border-yellow-500 md:text-yellow-500 md:after:bg-yellow-500"
                 >
                     VER CARDÁPIO
                     <i class="ph-caret-right font-bold text-3xl"></i>
@@ -212,7 +227,8 @@
 
         <!-- gallery -->
         <section
-            class="text-white flex flex-col gap-y-9 items-center"
+            id="gallery"
+            class="text-white flex flex-col gap-y-9 items-center mx-12 invisible section-reveal-top"
         >
             <div class="flex items-center flex-col">
                 <h2 class="text-2xl font-bold font-sora md:italic after-line before-line flex items-center gap-4 " id="menu-ancher">
@@ -220,32 +236,32 @@
                 </h2>
                 <p class="text-xs font-lato hover:text-orange-500 cursor-default">@melo.burgers</p>
             </div>
-            <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+            <div class="flex flex-col md:flex-row-reverse gap-16 items-center w-full flex-1">
                 <div
-                    class="grid grid-cols-3 grid-rows-2 gap-1"
+                    class="grid w-full grid-cols-3 grid-rows-2 md:grid-cols-[repeat(auto-fill,minmax(80px,250px))] gap-2 max-w-4xl"
                 >
-                    <div class="img-gallery">
-                        <img src="src/img/img.png" alt="">
+                    <div class="img-gallery img-after" data-index="0">
+                        <img class="object-cover h-full max-h-[250px] w-full max-w-[250px] block img-before" src="src/img/img.png" alt="">
                     </div>
-                    <div class="img-gallery">
-                        <img src="src/img/img.png" alt="">
+                    <div class="img-gallery img-after" data-index="1">
+                        <img class="object-cover h-full max-h-[250px] w-full max-w-[250px] block img-before" src="src/img/img.png" alt="">
                     </div>
-                    <div class="img-gallery">
-                        <img src="src/img/img.png" alt="">
+                    <div class="img-gallery img-after" data-index="2">
+                        <img class="object-cover h-full max-h-[250px] w-full max-w-[250px] block img-before" src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                     </div>
-                    <div class="img-gallery">
-                        <img src="https://github.com/rom013.png" alt="">
+                    <div class="img-gallery img-after" data-index="3">
+                        <img class="object-cover h-full max-h-[250px] w-full max-w-[250px] block img-before" src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=1120" alt="">
                     </div>
-                    <div class="img-gallery">
-                        <img src="https://github.com/rom013.png" alt="">
+                    <div class="img-gallery img-after" data-index="4">
+                        <img class="object-cover h-full max-h-[250px] w-full max-w-[250px] block img-before" src="https://images.pexels.com/photos/1025804/pexels-photo-1025804.jpeg?auto=compress&cs=tinysrgb&w=1120" alt="">
                     </div>
-                    <div class="img-gallery">
-                        <img src="https://github.com/rom013.png" alt="">
+                    <div class="img-gallery img-after" data-index="5">
+                        <img class="object-cover h-full max-h-[250px] w-full max-w-[250px] block img-before" src="https://images.pexels.com/photos/551991/pexels-photo-551991.jpeg?auto=compress&cs=tinysrgb&w=1120" alt="">
                     </div>
                 </div>
     
                 <a href="#" class="btn-menu bg-orange-500 rounded-lg">
-                    VER MAIS
+                    <p class="w-max">VER MAIS</p>
                     <i class="ph-caret-right font-bold text-3xl"></i>
                 </a>
                 
@@ -254,91 +270,119 @@
         <!-- end gallery -->
 
         <!-- contact -->
-        <section class="border-t border-dashed pt-12">
-            <div
-                class="text-white flex flex-col items-center gap-8"
-            >
-                <ul 
-                    class="flex flex-col gap-4"
-                >
-                    <li 
-                        class="list-contact"
-                    >
-                        <div class="w-6 h-6 bg-orange-100 rounded-full flex justify-center items-center">
-                            <i class="ph-whatsapp-logo"></i>
-                        </div>
-                        <p class="font-lato text-xs">
-                            (13) 9 9130-2430
-                        </p>
-                    </li>
-                    <li 
-                        class="list-contact"
-                    >
-                        <div class="w-6 h-6 bg-orange-100 rounded-full flex justify-center items-center">
-                            <i class="ph-map-pin"></i>
-                        </div>
-                        <p class="font-lato text-xs">
-                            Tv. Carlos Jair de Lima Guimarães, 85 <br>
-                            Bom Retiro - Santos - SP
-                        </p>
-                    </li>
-                    <li 
-                        class="list-contact"
-                    >
-                        <div class="w-6 h-6 bg-orange-100 rounded-full flex justify-center items-center">
-                            <i class="ph-at"></i>
-                        </div>
-                        <p class="font-lato text-xs">
-                            emailemail@gmail.com
-                        </p>
-                    </li>
-                    <li 
-                        class="list-contact"
-                    >
-                        <div class="w-6 h-6 bg-orange-100 rounded-full flex justify-center items-center">
-                            <i class="ph-instagram-logo"></i>
-                        </div>
-                        <p class="font-lato text-xs">
-                            @MlBurgers
-                        </p>
-                    </li>
-                </ul>
+        <section 
+            id="contact"
+            class="border-t border-dashed border-orange-100 pt-12 pb-52 bg-bg-blur md:flex justify-center invisible section-reveal-lateral"
+        >
 
+            <div class="md:flex gap-x-32">
+                <div class="hidden md:block">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d348.9026672792256!2d-46.37540985591743!3d-23.936126333728197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1b46e130e40f%3A0x18d7d2a8cea15896!2sRua%20Carlos%20Jair%20de%20Lima%20Guimar%C3%A3es%2C%2085%20-%20Bom%20Retiro%2C%20Santos%20-%20SP%2C%2011090-175!5e0!3m2!1spt-BR!2sbr!4v1658796831822!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <div
-                    class="border rounded-lg bg-black-500 px-3 py-4 flex flex-col gap-y-6"
+                    class="text-white flex flex-col items-center gap-8"
                 >
-                    <div class="flex items-center justify-between gap-x-6 font-sora">
-                        <p class="font-bold text-sm">
-                            Terça à Quinta 
-                        </p>
-                        <p class="text-[12px]">
-                            19:00h - 22:00h
-                        </p>
-                    </div>
-
-                    <div
-                        class="flex items-center justify-between gap-x-6 font-sora"
+                    <ul 
+                        class="flex flex-col gap-4"
                     >
-                        <p class="font-bold text-sm">
-                            Sexta à Domingo 
-                        </p>
-                        <p class="text-[12px]">
-                            18:00h - 00:00h
-                        </p>
+                        <li 
+                            class="list-contact"
+                        >
+                            <div class="circle-icon group">
+                                <i class="ph-whatsapp-logo md:text-[25px] group-hover:animate-spin-x"></i>
+                            </div>
+                            <p class="font-lato text-xs md:text-[16px]">
+                                (13) 9 9130-2430
+                            </p>
+                        </li>
+                        <li 
+                            class="list-contact"
+                        >
+                            <div class="circle-icon group">
+                                <i class="ph-map-pin md:text-[25px] group-hover:animate-spin-x"></i>
+                            </div>
+                            <p class="font-lato text-xs md:text-[16px] leading-relaxed">
+                                Tv. Carlos Jair de Lima Guimarães, 85 <br>
+                                Bom Retiro - Santos - SP
+                            </p>
+                        </li>
+                        <li 
+                            class="list-contact"
+                        >
+                            <div class="circle-icon group">
+                                <i class="ph-at md:text-[25px] group-hover:animate-spin-x"></i>
+                            </div>
+                            <p class="font-lato text-xs md:text-[16px]">
+                                emailemail@gmail.com
+                            </p>
+                        </li>
+                        <li 
+                            class="list-contact"
+                        >
+                            <div class="circle-icon group">
+                                <i class="ph-instagram-logo md:text-[25px] group-hover:animate-spin-x"></i>
+                            </div>
+                            <p class="font-lato text-xs md:text-[16px]">
+                                @MlBurgers
+                            </p>
+                        </li>
+                    </ul>
+    
+                    <div
+                        class="border rounded-lg bg-black-500 px-3 py-4 flex flex-col gap-y-6"
+                    >
+                        <div class="flex items-center justify-between gap-x-6 font-sora">
+                            <p class="font-bold text-sm">
+                                Terça à Quinta 
+                            </p>
+                            <p class="text-[12px]">
+                                19:00h - 22:00h
+                            </p>
+                        </div>
+    
+                        <div
+                            class="flex items-center justify-between gap-x-6 font-sora"
+                        >
+                            <p class="font-bold text-sm">
+                                Sexta à Domingo 
+                            </p>
+                            <p class="text-[12px]">
+                                18:00h - 00:00h
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- end contact -->
     </main>
+    <footer class="flex  flex-col absolute bottom-0 items-center w-full z-[51]">
+        <div class="bg-black py-6 px-6 w-full md:w-10/12 flex flex-col items-center justify-between gap-y-9 md:gap-0 md:rounded-t-[24px] md:flex-row">
+            <img 
+                src="src/img/logo.png" 
+                alt="logo"
+    
+                class="w-10"
+            >
+            <small class="text-white">© 2022 <span class="text-orange-500">melo burgue's</span> || Todos direitos reservados</small>
+            <div class="hidden md:flex items-center w-20 justify-between">
+                <a href="#" class="text-white">
+                    <i class="ph-whatsapp-logo text-2xl"></i>
+                </a>
+                <a href="#" class="text-white">
+                    <i class="ph-instagram-logo text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 
 
 
-    <!-- corrigir o espaço do navz -->
+    <!-- 1120 - 720 -->
 
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/script.js"></script>
 </body>
 
 </html>
