@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardápio</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- end-font -->
+
+    <!-- script -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <!-- end script -->
+</head>
+
+<body>
+    <nav class="z-20 absolute w-screen flex justify-between  top-0 transition duration-500 md:w-[calc(100%-154px)] md:translate-x-0 md:ml-6 md:mr-32 md:justify-end md:top-16 md:items-center md:fixed"
+        id="nav">
+        <div class="fixed flex active transition duration-500 md:translate-x-0 z-50" id="listNav">
+            <ul
+                class="flex text-white gap-6 bg-[#0F0F0F] rounded-br font-sora flex-col py-16 px-8 md:rounded-none md:flex md:flex-row md:p-0 md:bg-transparent">
+                <li class="md:li-nav">
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="md:li-nav">
+                    <a href="#aboutUs" aria-hidden="true">
+                        Sobre nós
+                    </a>
+                </li>
+                <li class="md:li-nav">
+                    <a href="#menu">
+                        Cardápio
+                    </a>
+                </li>
+                <li class="md:li-nav">
+                    <a href="#gallery">
+                        Galeria
+                    </a>
+                </li>
+                <li class="md:li-nav">
+                    <a href="#contact">
+                        Contato
+                    </a>
+                </li>
+            </ul>
+
+            <div class="absolute right-[-3.5rem] top-6 space-y-2  md:hidden" id="btn-mobile" aria-expanded="false"
+                aria-label="Abrir Menu">
+                <div class="w-8 h-0.5 bg-white rounded"></div>
+                <div class="w-8 h-0.5 bg-white rounded"></div>
+                <div class="w-8 h-0.5 bg-white rounded"></div>
+            </div>
+        </div>
+
+
+        <div class="mr-6 mt-6 w-12 h-12 md:hidden fixed right-0">
+            <img src="src/img/logo.png" alt="logo melo burgers" class="w-full h-full">
+        </div>
+    </nav>
+
+    <header class="mx-12 text-white relative top-28 flex flex-col gap-y-8">
+        <p class="text-xs text-center">Você vai precisar de duas mãos para segurar nossos lanches. Nosso hambúrguer fresco e suculento é servido quentinho com qualidade e muito sabor</p>
+
+        <div class="w-full overflow-hidden">
+            <div class="relative w-[300%] max-h-[300px]  bg-red-500 flex items-center">
+                <div class="flex overflow-hidden relative max-h-[300px] slide" style="transition: 2s; left: 0;">
+                    
+                    <div class="w-full relative">
+                        <img class="w-full h-full object-cover img-corousel"
+                            src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                    <div class="w-full relative">
+                        <img class="w-full h-full object-cover img-corousel"
+                            src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=1120"
+                            alt="">
+                    </div>
+                    <div class="w-full relative">
+                        <img class="w-full h-full object-cover img-corousel"
+                            src="https://images.pexels.com/photos/551991/pexels-photo-551991.jpeg?auto=compress&cs=tinysrgb&w=1120"
+                            alt="">
+                    </div>
+                </div>
+
+
+                <div class="absolute w-[calc(100vw-96px)] bottom-3 flex justify-center">
+                    <input type="radio" name="ab" id="btn-1" class="hidden pp">    
+                    <label for="btn-1" class="w-10 h-1 rounded-full border border-orange-500 mr-3 gg"></label>
+
+                    <input type="radio" name="ab" id="btn-2" class="hidden pp">
+                    <label for="btn-2" class="w-10 h-1 rounded-full border border-orange-500 mr-3 gg"></label>
+
+                    <input type="radio" name="ab" id="btn-3" class="hidden pp">
+                    <label for="btn-3" class="w-10 h-1 rounded-full border border-orange-500 mr-3 gg"></label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col gap-y-3 items-center">
+            <p class="text-xs">Baixe o nosso cardápio agora e veja quando quiser!</p>
+            <a href="#" class="bg-orange-500 w-full flex justify-center py-2 rounded-lg font-bold text-lg">BAIXAR CARDÁPIO</a>
+        </div>
+    </header>
+    <main></main>
+    <footer></footer>
+
+    <script type="module" src="/js/menuMobile.js"></script>
+    <script type="module" src="/js/scriptMenu.js"></script>
+</body>
+
+</html>
