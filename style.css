@@ -169,3 +169,8 @@ body{
     }
     .close{color: #f00 !important; text-shadow: 0 0 4px #f00 !important}.open{color: #12C945 !important; text-shadow: 0 0 4px #12C945 !important}
 }
+
+
+.pp:checked + .gg{
+    @apply bg-yellow-500
+}
