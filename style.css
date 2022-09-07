@@ -7,21 +7,6 @@ body{
     @apply min-h-[200vh] bg-black-500 flex flex-col scroll-smooth relative
 }
 
-/*.li-nav{
-    @apply 
-        flex 
-        text-white gap-6 
-        bg-[#0F0F0F] 
-        rounded-br 
-        font-sora 
-        flex-col 
-        py-16 
-        px-8 
-        md:rounded-none 
-        md:flex-row 
-        md:p-0 
-        md:bg-transparent
-}*/
 .anchor-nav{
     @apply cursor-pointer
 }
@@ -32,9 +17,11 @@ body{
 .active{
     @apply translate-x-[-150px]
 }
-
-
-
+@layer components{
+    .nav-menu{
+        @apply relative z-0 h-32 bg-black mx-auto w-[80%] rounded-b-2xl px-16 flex flex-row-reverse items-center justify-center
+    }
+}
 .btn-menu{
     @apply  
     text-lg 
@@ -173,4 +160,92 @@ body{
 
 .pp:checked + .gg{
     @apply bg-yellow-500
+}
+
+.card-menu-grid{
+    @apply
+    h-60
+    bg-gradient-to-b from-black to-[#1E1A19]
+    rounded-lg
+    flex
+    flex-col
+    overflow-hidden
+}
+.card-menu-grid div{
+    @apply 
+    flex
+    flex-col
+    gap-y-4
+    justify-center
+    items-center
+    h-full
+    font-sora
+}
+.card-menu-grid .info-dish p{
+    @apply hidden
+}
+
+.slots-grid{
+    @apply
+    grid
+    gap-9
+    grid-cols-[repeat(auto-fill,minmax(120px,1fr))]
+}
+
+.card-menu-list{
+    @apply
+    h-32
+    bg-gradient-to-b from-black to-[#1E1A19]
+    rounded-lg
+    flex
+    flex-row-reverse
+    justify-between
+    gap-2
+    py-5
+    px-5
+}
+.card-menu-list img{
+    @apply h-20 w-20 rounded-lg
+}
+.card-menu-list .info-dish{
+    @apply 
+    flex
+    flex-col
+    gap-y-4
+    w-full
+    flex-1
+    justify-center
+    h-full
+    font-sora
+}
+.card-menu-list p{
+    @apply text-white text-xs h-20 overflow-hidden
+}
+.card-menu-list .see-more{
+    @apply hidden
+}
+.slots-list{
+    @apply 
+    flex
+    flex-col
+    gap-8
+}
+
+
+.list-composition{
+    @apply max-h-28 overflow-auto p-2
+}
+.list-composition li{
+    @apply flex text-white gap-2 text-sm
+}
+.list-composition span{
+    @apply text-orange-500 font-bold
+}
+
+#like:checked + #likeicon svg path{
+    @apply fill-yellow-500
+}
+
+#listMenu:checked + label, #gridMenu:checked + label{
+    @apply bg-[rgba(255,106,0,0.8)]
 }

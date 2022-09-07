@@ -9,7 +9,8 @@ module.exports = {
         "bg-menu": "url('src/img/background-1.png')",
         "bg-main": "url('src/img/background-image-main.png')",
         "bg-menu-282": "url('src/img/background-1-282.png')",
-        "bg-blur": "url('src/img/blur.png')"
+        "bg-blur": "url('src/img/blur.png')",
+        "bg-blur-2": "url('src/img/background-blur.png')"
       },
       colors:{
         "black-500": "#131313",
