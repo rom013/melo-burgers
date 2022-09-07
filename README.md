@@ -1,5 +1,6 @@
 # Melo-Burgers
-## 🚧 Em fase de desenvolvimento 🚧 Projeto desenvolvido pra uma lanchonete ficticia.
+### 🚧 Em fase de desenvolvimento 🚧 
+Projeto desenvolvido pra uma lanchonete ficticia.
 
 ## Screenshots
 
