@@ -23,7 +23,7 @@ function displayImg(b) {
 	count = parseInt(b.srcElement.dataset.index)
 
 	$main.insertAdjacentHTML('afterbegin', `
-		<div class="fixed flex flex-col bg-[rgba(0,0,0,.5)] h-screen w-full top-0 md:p-8 box-border gap-y-4 z-[99999]" id="imgFull">
+		<div class="fixed flex flex-col bg-[black] h-screen w-full top-0 md:p-8 box-border gap-y-4 z-[999]" id="imgFull">
 			<div class="text-white relative left-[90%] cursor-pointer w-8 h-8 text-3xl hover:text-orange-400 transition" id="btnClose">
 				<i class="ph-x"></i>
 			</div>
